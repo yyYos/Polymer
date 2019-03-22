@@ -7,25 +7,17 @@
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <input value="{{value::input}}">
   </template>
 
   <script>
-    /**
-     * `ids-input-db`
-     * data banding
-     *
-     * @customElement
-     * @polymer
-     * @demo demo/index.html
-     */
     class IdsInputDb extends Polymer.Element {
       static get is() { return 'ids-input-db'; }
       static get properties() {
         return {
-          prop1: {
+          value: {
             type: String,
-            value: 'ids-input-db'
+            notify: true
           }
         };
       }

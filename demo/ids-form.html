@@ -1,0 +1,39 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../ids-input-db.html">
+
+<dom-module id="ids-form">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    [[valuePadre]]
+    <ids-input-db id="nombre" value={{valuePadre}}></ids-input-db>
+  </template>
+
+  <script>
+    class IdsForm extends Polymer.Element {
+      static get is() { return 'ids-form'; }
+      static get properties() {
+        return {
+          valuePadre: {
+            type: String
+          }
+        };
+      }
+
+      ready () {
+        super.ready();
+        //console.log(this.$.nombre.shadowRoot);
+        //this.$.nombre.addEventListener('value-changed', this.valueHandler);
+      }
+      valueHandler (e) {
+        console.log(e);
+      }
+
+    }
+
+    window.customElements.define(IdsForm.is, IdsForm);
+  </script>
+</dom-module>
