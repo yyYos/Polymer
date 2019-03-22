@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="ids-input-db">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `ids-input-db`
+     * data banding
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class IdsInputDb extends Polymer.Element {
+      static get is() { return 'ids-input-db'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'ids-input-db'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(IdsInputDb.is, IdsInputDb);
+  </script>
+</dom-module>
